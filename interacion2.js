@@ -31,6 +31,17 @@ const users = [
     },
 ]
 
-for (user of users){
+let media = [];
+for(let volumen of users){
+    for (let vol in volumen.favoritesSounds){
+        media.push(volumen.favoritesSounds[vol].volume)
+    }
 
-}
+}//console.log(media);
+let numerico = 0;
+for (let i = 0; i < media.length; i++) {
+   numerico = (numerico + media[i]);
+    
+} 
+let mediaVolumen = numerico/media.length;
+console.log(mediaVolumen)

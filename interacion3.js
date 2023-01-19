@@ -33,3 +33,16 @@ const users = [
         }
     },
 ]
+
+let top = []
+for (let user of users){
+    for (let volumen in user.favoritesSounds){
+        if ( top[volumen]){
+            top[volumen] ++
+        }
+         else {
+            top[volumen] = 1;
+         }
+    }
+
+}console.log(top);
